@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --nyx-ink: #071921;
+  --nyx-deep-water: #063f4d;
+  --nyx-teal: #007e8c;
+  --nyx-aqua: #75c8cb;
+  --nyx-gold: #c58a29;
+  --nyx-pale-gold: #e4b967;
+  --nyx-ivory: #f6efe4;
+  --nyx-stone: #9a978d;
+  --nyx-walnut: #5c3522;
+  --nyx-ember: #a85528;
+}
+
+@theme inline {
+  --color-nyx-ink: var(--nyx-ink);
+  --color-nyx-deep-water: var(--nyx-deep-water);
+  --color-nyx-teal: var(--nyx-teal);
+  --color-nyx-aqua: var(--nyx-aqua);
+  --color-nyx-gold: var(--nyx-gold);
+  --color-nyx-pale-gold: var(--nyx-pale-gold);
+  --color-nyx-ivory: var(--nyx-ivory);
+  --color-nyx-stone: var(--nyx-stone);
+  --color-nyx-walnut: var(--nyx-walnut);
+  --color-nyx-ember: var(--nyx-ember);
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-manrope);
+  --shadow-nyx-card: 0 24px 48px rgba(7, 25, 33, 0.18);
+  --shadow-nyx-gold: 0 12px 32px rgba(197, 138, 41, 0.22);
+}
+
+@layer base {
+  * {
+    border-color: color-mix(in srgb, var(--nyx-ink) 14%, transparent);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--nyx-ink);
+  }
+
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--nyx-ivory);
+    color: var(--nyx-ink);
+    font-family: var(--font-manrope), Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--nyx-gold);
+    color: var(--nyx-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--nyx-pale-gold);
+    outline-offset: 4px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .section-shell {
+    margin-inline: auto;
+    width: min(100% - 2rem, 84rem);
+  }
+
+  .eyebrow {
+    color: var(--nyx-gold);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .gold-rule {
+    height: 1px;
+    width: 4rem;
+    background: linear-gradient(90deg, transparent, var(--nyx-gold), transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
