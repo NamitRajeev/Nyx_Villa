@@ -57,22 +57,26 @@ export const galleryImages = [
 export const amenities = [
   {
     icon: "Waves",
-    title: "Indoor pool",
-    description: "The signature NYX experience, reserved for a private stay.",
+    title: "Private indoor pool",
+    description:
+      "The signature space at NYX, designed for swimming, relaxing, and spending time together.",
   },
   {
     icon: "BedDouble",
-    title: "Restful rooms",
-    description: "Bedrooms shaped by deep tones, layered light, and warmth.",
+    title: "Dolby Atmos sound",
+    description:
+      "Immersive sound throughout the villa, including the pool, allowing music to become part of the atmosphere.",
   },
   {
     icon: "Bath",
-    title: "Marble bathing",
-    description: "Stone, glass, and illuminated mirrors create a composed retreat.",
+    title: "Private home theatre",
+    description:
+      "A projector paired with the sound system creates an immersive cinema experience within the villa.",
   },
   {
     icon: "LampWallUp",
-    title: "Ambient light",
-    description: "A nocturnal lighting language carries through the villa.",
+    title: "Designed for comfort",
+    description:
+      "Thoughtfully designed bedrooms, bathrooms, lighting, and living spaces create a comfortable setting throughout the villa.",
   },
 ] as const;
