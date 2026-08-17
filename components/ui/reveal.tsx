@@ -23,11 +23,34 @@ export function Reveal({
 
   return (
     <motion.div
-      animate={{ opacity: 1, y: 0 }}
-      initial={prefersReducedMotion ? false : { opacity: 0, y: 18 }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-      viewport={{ amount: 0.2, once: true }}
-      whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      initial={
+        prefersReducedMotion
+          ? false
+          : {
+              opacity: 0,
+              y: 28,
+              scale: 0.985,
+            }
+      }
+      transition={{
+        duration: 0.85,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      viewport={{
+        amount: 0.2,
+        once: true,
+      }}
+      whileInView={
+        prefersReducedMotion
+          ? undefined
+          : {
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }
+      }
       className={className}
       {...props}
     >
